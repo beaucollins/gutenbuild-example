@@ -20,26 +20,39 @@ Your `./build` directory live updates with runnable Guten-code.
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: My Fantastic Block
+ * Plugin Name: Gutenbuild
  * Plugin URI: http://gutenbuild.local/
  * Description: Blocks are the future.
  */
 
 function gutenbuild_init_block() {
-
 	$script_asset = require_once( __DIR__ . '/build/index.asset.php' );
 
 	wp_register_script(
-		'create-block-gutenbuild-example-block-editor',
+		'gutenbuild-example-block-editor',
 		plugins_url( 'build/index.js', __FILE__ ),
 		$script_asset['dependencies'],
 		$script_asset['version']
 	);
 
+	wp_register_style(
+		'gutenbuild-editor-style',
+		plugins_url( 'editor.css', __FILE__ ),
+		[]
+	);
+
+	wp_register_style(
+		'gutenbuild-style',
+		plugins_url( 'style.css', __FILE__ ),
+		[]
+	);
+
 	register_block_type(
-		'create-block/premium-content',
+		'create-block/gutenbuild',
 		[
-			'editor_script' => 'create-block-premium-content-block-editor',
+			'editor_script' => 'gutenbuild-example-block-editor',
+			'editor_style' => 'gutenbuild-editor-style',
+			'style' => 'gutenbuild-style',
 		]
 	);
 }

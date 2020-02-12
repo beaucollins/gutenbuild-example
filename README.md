@@ -1,6 +1,6 @@
 # Gutenbuild
 
-Zero to Gutenburg with Docker and @wordpress/env.
+Zero to Gutenburg with Docker and `@wordpress/env`.
 
 1. Start building
    ```bash

@@ -92,4 +92,4 @@ And see your block in action:
 http://localhost:8888/wp-admin
 ```
 
-Login with `admin` and `password`. To see your block in action.
+Login with `admin` and `password` to see your block in action. Edit `src/index.js` and the updates are live.

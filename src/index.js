@@ -23,7 +23,7 @@ registerBlockType( 'create-block/gutenbuild', {
 	 * The block inserter will show this name.
 	 */
 	title: __(
-		'My Awesome Block',
+		'Gutenbuild',
 		'gutenbuild'
 	),
 

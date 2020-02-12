@@ -1,6 +1,18 @@
 # Gutenbuild
 
-Zero to Gutenburg with Docker.
+Zero to Gutenburg with Docker and @wordpress/env.
+
+1. Start building
+   ```bash
+   docker run -v `pwd`/src:/var/app/src -v `pwd`/build:/var/app/build coplusco/gutenbuild
+   ```
+2. Boot WordPress
+   ```bash
+   wp-env start
+   open http://localhost:8888/
+   ```
+3. ???
+4. Blocks!
 
 ## Scenario
 
